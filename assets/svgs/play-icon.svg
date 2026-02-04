@@ -1,0 +1,15 @@
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 12824">
+<foreignObject x="-5" y="-5" width="60" height="60"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(2.5px);clip-path:url(#bgblur_0_5_1863_clip_path);height:100%;width:100%"></div></foreignObject><circle id="Ellipse 307" data-figma-bg-blur-radius="5" cx="25" cy="25" r="24" fill="white" fill-opacity="0.1" stroke="url(#paint0_linear_5_1863)" stroke-width="2"/>
+<g id="solar:play-bold">
+<path id="Vector" d="M34.409 22.3528C34.8893 22.6082 35.291 22.9895 35.5712 23.4558C35.8514 23.9221 35.9994 24.4558 35.9994 24.9998C35.9994 25.5438 35.8514 26.0775 35.5712 26.5438C35.291 27.0101 34.8893 27.3914 34.409 27.6468L21.597 34.6138C19.534 35.7358 17 34.2758 17 31.9678V18.0328C17 15.7228 19.534 14.2638 21.597 15.3848L34.409 22.3528Z" fill="white"/>
+</g>
+</g>
+<defs>
+<clipPath id="bgblur_0_5_1863_clip_path" transform="translate(5 5)"><circle cx="25" cy="25" r="24"/>
+</clipPath><linearGradient id="paint0_linear_5_1863" x1="-5.2154e-08" y1="10" x2="44.5" y2="41" gradientUnits="userSpaceOnUse">
+<stop stop-color="#00FFFF"/>
+<stop offset="1" stop-color="#FE53BB"/>
+</linearGradient>
+</defs>
+</svg>

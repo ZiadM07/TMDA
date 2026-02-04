@@ -1,0 +1,14 @@
+flutter_native_splash:
+  color: "#0f2727"
+  image: assets/pngs/tmda-splash-dark.png
+  color_dark: "#0f2727"
+  icon_background_color: "#0f2727"
+  image_dark: assets/pngs/tmda-splash-dark.png
+
+  android_12:
+    color: "#0f2727"
+    image: assets/pngs/tmda-splash-dark.png
+    color_dark: "#0f2727"
+    image_dark: assets/pngs/tmda-splash-dark.png
+
+  web: false

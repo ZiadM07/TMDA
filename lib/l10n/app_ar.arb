@@ -1,0 +1,143 @@
+{
+    "@@locale": "ar",
+  
+    "theme": "المظهر",
+    "dark": "داكن",
+    "light": "فاتح",
+    "defaultSystem": "إعدادات النظام",
+    "loading": "جاري التحميل",
+    "error": "خطأ",
+    "close": "إغلاق",
+    "retry": "إعادة المحاولة",
+    "done": "تم",
+    "clear": "مسح",
+    "saveChanges": "حفظ التغييرات",
+    "required": "مطلوب",
+    "delete": "حذف",
+    "cancel": "إلغاء",
+  
+    "textIsRequired": "مطلوب",
+    "textIsTooShort": "قصير جدًا",
+  
+    "welcome": "مرحبًا",
+    "welcomeHeadline": "دليلك للأفلام والمسلسلات والمشاهير",
+    "welcomeToOurCommunity": "مرحبًا بك في\n مجتمعنا",
+  
+    "failedToAuthenticate": "فشل تسجيل الدخول: {error}",
+    "@failedToAuthenticate": {
+      "placeholders": {
+        "error": { "type": "String" }
+      }
+    },
+  
+    "pleaseEnterName": "يرجى إدخال الاسم",
+    "invalidEgyptianPhoneNumber": "رقم الهاتف غير صحيح. الصيغة: 01XXXXXXXXX",
+  
+    "signUp": "إنشاء حساب",
+    "login": "تسجيل الدخول",
+  
+    "userName": "اسم المستخدم",
+    "password": "كلمة المرور",
+    "forgetPassword": "نسيت كلمة المرور؟",
+    "dontHaveAnAccount": "ليس لديك حساب؟",
+  
+    "newMovies": "أفلام جديدة",
+    "seeAll": "عرض الكل",
+    "casts": "طاقم العمل",
+    "allMovies": "كل الأفلام",
+  
+    "newSeries": "مسلسلات جديدة",
+    "seasons": "المواسم",
+    "episodes": "الحلقات",
+  
+    "allCast": "كل طاقم العمل",
+    "allSeries": "كل المسلسلات",
+  
+    "movies": "أفلام",
+    "series": "مسلسلات",
+    "tvShows": "عروض تلفزيونية",
+    "profile": "الملف الشخصي",
+  
+    "search": "بحث",
+    "searchFailed": "فشل البحث",
+    "actors": "الممثلون",
+  
+    "whatYouWantToWatch": "ماذا تريد أن تشاهد؟",
+    "findYourFavoriteMoviesTvShowsAndActors": "ابحث عن أفلامك ومسلسلاتك وممثليك المفضلين.",
+  
+    "overview": "نظرة عامة",
+  
+    "yourMovieRatings": "تقييماتك للأفلام",
+    "yourTvShowRatings": "تقييماتك للمسلسلات",
+    "yourActorRatings": "تقييماتك للممثلين",
+  
+    "myWatchList": "قائمة المشاهدة",
+    "nowPlaying": "يعرض الآن",
+    "popularMovies": "أفلام مشهورة",
+    "topRatedMovies": "أعلى الأفلام تقييمًا",
+    "somethingWentWrong": "حدث خطأ ما",
+    "tmdaScore": "تقييم TMDA",
+    "votes": "عدد الأصوات",
+    "save": "حفظ",
+    "year": "السنة",
+    "country": "الدولة",
+    "length": "المدة",
+    "minutes": "دقيقة",
+    "cast": "طاقم التمثيل",
+    "recommended": "موصى به",
+    "similarMovies": "أفلام مشابهة",
+    "readMore": "المزيد..",
+    "readLess": "أقل..",
+    "airingToday": "يعرض اليوم",
+    "popularShows": "مسلسلات مشهورة",
+    "topRatedShows": "أعلى المسلسلات تقييمًا",
+    "similarTvShows": "مسلسلات مشابهة",
+    "birthday": "تاريخ الميلاد",
+    "placeOfBirth": "مكان الميلاد",
+    "popularity": "الشعبية",
+    "noBiographyAvailable": "لا توجد سيرة ذاتية",
+    "ratedMovies": "أفلام تم تقييمها",
+    "ratedTvShows": "مسلسلات تم تقييمها",
+  
+    "signUpDescription": "يتم إنشاء حسابات TMDB عبر موقعهم الرسمي.\nبعد إنشاء الحساب، عد وسجّل الدخول.",
+    "openTmdbWebsite": "فتح موقع TMDB",
+    "alreadyHaveAccount": "لدي حساب بالفعل",
+    "logout": "تسجيل الخروج",
+    "areYouSureYouWantToLogout": "هل أنت متأكد من تسجيل الخروج؟",
+    "notLoggedIn": "غير مسجل الدخول",
+    "guest": "زائر",
+  
+    "noRatedMovies": "لا توجد أفلام مُقيّمة بعد",
+    "rateMoviesToSeeThemHere": "قيّم الأفلام لتظهر هنا",
+    "noRatedTvShows": "لا توجد مسلسلات مُقيّمة بعد",
+    "rateShowsToSeeThemHere": "قيّم المسلسلات لتظهر هنا",
+    "rateToUnlock": "قيّم لفتح المحتوى",
+  
+    "watchlistMovies": "أفلام قائمة المشاهدة",
+    "watchlistTvShows": "مسلسلات قائمة المشاهدة",
+    "addMoviesToWatchlist": "أضف أفلامًا لقائمة المشاهدة لعرضها هنا",
+    "addShowsToWatchlist": "أضف مسلسلات لقائمة المشاهدة لعرضها هنا",
+    "saved": "تم الحفظ",
+    "watchlist": "قائمة المشاهدة",
+    "noWatchlist": "لا توجد قائمة مشاهدة بعد",
+    "addedToWatchlist": "تمت الإضافة إلى قائمة المشاهدة",
+    "removedFromWatchlist": "تمت الإزالة من قائمة المشاهدة",
+    "loginRequiredToSave": "يرجى تسجيل الدخول لحفظ الأفلام في قائمة المشاهدة",
+    "swipeRightToRemove": "اسحب لليمين للإزالة من قائمة المشاهدة",
+    "remove": "إزالة",
+  
+    "noTrailerAvailable": "لا يوجد إعلان متاح",
+    "noCastAvailable": "لا يوجد طاقم تمثيل متاح",
+    "watchTrailer": "مشاهدة الإعلان",
+    "tapFullscreenForBetterExperience": "اضغط على ملء الشاشة لتجربة أفضل",
+    "trailer": "الإعلان",
+    "noTrailerYet": "لا يوجد إعلان لهذا العمل حتى الآن",
+    "youMustBeLoggedInToSaveItems": "يجب تسجيل الدخول لحفظ العناصر",
+    "enterYourUsername": "أدخل اسم المستخدم",
+    "enterYourPassword": "أدخل كلمة المرور",
+    "noResultsFound": "لا توجد نتائج",
+  "signInToContinue": "قم بتسجيل الدخول للمتابعة",
+  "noResultsFoundDescription": "لا توجد نتائج. يرجى المحاولة مرة أخرى بكلمات مختلفة."
+
+  }
+  
