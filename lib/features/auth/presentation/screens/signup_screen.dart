@@ -1,95 +1,65 @@
-import '../../../../config/router/app_router.gr.dart';
-import '../../../../config/theme/app_color_scheme.dart';
 import '../../../../core/constants/exports.dart';
-import '../../../shared/presentation/widgets/action_button.dart';
-import '../../../shared/presentation/widgets/app_text.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
 @RoutePage()
-class SignupScreen extends StatelessWidget {
-  const SignupScreen({super.key});
+class AuthWebViewScreen extends StatefulWidget {
+  const AuthWebViewScreen({
+    super.key,
+    required this.initialUrl,
+    required this.onSuccessRoute,
+    required this.successUrlKeywords,
+  });
 
-  static const _tmdbSignupUrl = 'https://www.themoviedb.org/signup';
+  final String initialUrl;
+  final PageRouteInfo onSuccessRoute;
+  final List<String> successUrlKeywords;
 
-  Future<void> _openTmdbSignup() async {
-    final uri = Uri.parse(_tmdbSignupUrl);
-    if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
-      throw 'Could not launch $_tmdbSignupUrl';
-    }
+  @override
+  State<AuthWebViewScreen> createState() => _AuthWebViewScreenState();
+}
+
+class _AuthWebViewScreenState extends State<AuthWebViewScreen> {
+  late final WebViewController _controller;
+  bool _isLoading = true;
+
+  @override
+  void initState() {
+    super.initState();
+
+    _controller = WebViewController()
+      ..setJavaScriptMode(JavaScriptMode.unrestricted)
+      ..setUserAgent(
+        'Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36 '
+        'Chrome/120.0.0.0 Mobile Safari/537.36',
+      )
+      ..setNavigationDelegate(
+        NavigationDelegate(
+          onPageStarted: (_) => setState(() => _isLoading = true),
+          onPageFinished: (_) => setState(() => _isLoading = false),
+          onNavigationRequest: (request) {
+            if (_isSuccess(request.url)) {
+              context.replaceRoute(widget.onSuccessRoute);
+              return NavigationDecision.prevent;
+            }
+            return NavigationDecision.navigate;
+          },
+        ),
+      )
+      ..loadRequest(Uri.parse(widget.initialUrl));
+  }
+
+  bool _isSuccess(String url) {
+    return widget.successUrlKeywords.any(url.contains);
   }
 
   @override
   Widget build(BuildContext context) {
-    final cs = context.colorScheme;
-    return AppScaffold(
-      showBackButton: true,
-      title: context.locale.signUp,
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 35),
-        child: Column(
+    return Scaffold(
+      body: SafeArea(
+        child: Stack(
           children: [
-            const Spacer(),
-
-            Icon(
-              SolarIconsOutline.userPlusRounded,
-              size: 100,
-              color: cs.primary.withValues(alpha: 0.8),
-            ),
-
-            const SizedBox(height: 30),
-
-            AppText(
-              context.locale.signUp,
-              style: context.textTheme.headlineMedium,
-              align: TextAlign.center,
-            ),
-
-            const SizedBox(height: 32),
-
-            AppText(
-              context.locale.signUpDescription,
-              style: context.textTheme.labelMedium,
-              align: TextAlign.center,
-            ),
-
-            const SizedBox(height: 80),
-
-            ActionButton(
-              title: context.locale.openTmdbWebsite,
-              width: 260,
-              height: 65,
-              borderRadius: 20,
-              type: AppButtonType.custom,
-              gradient: LinearGradient(
-                colors: [
-                  cs.primary.withValues(alpha: 0.8),
-                  cs.secondary.withValues(alpha: 0.8),
-                ],
-              ),
-              borderWidth: 0,
-              textColor: cs.textPrimary,
-              fontSize: 13,
-              fontWeight: FontWeight.w700,
-              onPressed: _openTmdbSignup,
-            ),
-
-            const SizedBox(height: 28),
-
-            ActionButton(
-              height: 65,
-              title: context.locale.alreadyHaveAccount,
-              width: 260,
-              borderRadius: 20,
-              type: AppButtonType.custom,
-              backgroundColor: cs.primary.withValues(alpha: 0.5),
-              textColor: cs.textPrimary,
-              fontSize: 13,
-              borderWidth: 0,
-              fontWeight: FontWeight.w700,
-              onPressed: () => context.replaceRoute(LoginRoute()),
-            ),
-
-            const Spacer(),
+            WebViewWidget(controller: _controller),
+            if (_isLoading) const LinearProgressIndicator(minHeight: 2),
           ],
         ),
       ),

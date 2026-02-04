@@ -80,7 +80,18 @@ class WelcomeScreen extends StatelessWidget {
                 textColor: cs.textPrimary,
                 fontSize: 20,
                 fontWeight: FontWeight.w700,
-                onPressed: () => context.pushRoute(SignupRoute()),
+                onPressed: () => context.pushRoute(
+                  AuthWebViewRoute(
+                    initialUrl: 'https://www.themoviedb.org/signup',
+                    successUrlKeywords: const [
+                      '/login',
+                      '/account',
+                      '/settings',
+                      '/u/',
+                    ],
+                    onSuccessRoute: const LoginRoute(),
+                  ),
+                ),
               ),
             ],
           ),

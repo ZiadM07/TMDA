@@ -347,5 +347,11 @@ class AppLocalizationsAr extends AppLocalizations {
   String get signInToContinue => 'قم بتسجيل الدخول للمتابعة';
 
   @override
+  String get somethingWentWrongTryAgain => ' Something went wrong. Please try again.';
+
+  @override
+  String get youEnteredInvalidUsernameOrPassword => ' You entered invalid username or password';
+
+  @override
   String get noResultsFoundDescription => 'لا توجد نتائج. يرجى المحاولة مرة أخرى بكلمات مختلفة.';
 }

@@ -89,7 +89,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get password => 'Password';
 
   @override
-  String get forgetPassword => 'Forgot password?';
+  String get forgetPassword => 'Forgot password';
 
   @override
   String get dontHaveAnAccount => 'Don’t have an account?';
@@ -345,6 +345,12 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get signInToContinue => 'Sign in to continue';
+
+  @override
+  String get somethingWentWrongTryAgain => ' Something went wrong. Please try again.';
+
+  @override
+  String get youEnteredInvalidUsernameOrPassword => ' You entered invalid username or password';
 
   @override
   String get noResultsFoundDescription => 'No results found. Please try again with different keywords.';

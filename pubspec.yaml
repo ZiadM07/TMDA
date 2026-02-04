@@ -47,6 +47,7 @@ dependencies:
   youtube_player_flutter: ^9.0.3
   flutter_native_splash: ^2.4.7
   carousel_slider: ^5.1.1
+  webview_flutter: ^4.7.0
 
 dev_dependencies:
   flutter_test:

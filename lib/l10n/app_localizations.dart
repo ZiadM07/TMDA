@@ -254,7 +254,7 @@ abstract class AppLocalizations {
   /// No description provided for @forgetPassword.
   ///
   /// In en, this message translates to:
-  /// **'Forgot password?'**
+  /// **'Forgot password'**
   String get forgetPassword;
 
   /// No description provided for @dontHaveAnAccount.
@@ -766,6 +766,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Sign in to continue'**
   String get signInToContinue;
+
+  /// No description provided for @somethingWentWrongTryAgain.
+  ///
+  /// In en, this message translates to:
+  /// **' Something went wrong. Please try again.'**
+  String get somethingWentWrongTryAgain;
+
+  /// No description provided for @youEnteredInvalidUsernameOrPassword.
+  ///
+  /// In en, this message translates to:
+  /// **' You entered invalid username or password'**
+  String get youEnteredInvalidUsernameOrPassword;
 
   /// No description provided for @noResultsFoundDescription.
   ///

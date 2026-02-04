@@ -37,7 +37,7 @@ class AppRouter extends RootStackRouter {
           duration: Duration(milliseconds: 400),
         ),
         CustomRoute(
-          page: SignupRoute.page,
+          page: AuthWebViewRoute.page,
           transitionsBuilder: TransitionsBuilders.fadeIn,
           duration: Duration(milliseconds: 400),
         ),

@@ -10,39 +10,40 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i19;
-import 'package:tmda/config/router/app_router.dart' as _i2;
+import 'package:collection/collection.dart' as _i21;
+import 'package:tmda/config/router/app_router.dart' as _i3;
 import 'package:tmda/core/constants/exports.dart' as _i20;
-import 'package:tmda/core/utils/enums.dart' as _i21;
+import 'package:tmda/core/utils/enums.dart' as _i22;
 import 'package:tmda/features/actors/presentation/screens/actor_details_screen.dart'
     as _i1;
 import 'package:tmda/features/auth/presentation/screens/login_screen.dart'
-    as _i3;
+    as _i4;
 import 'package:tmda/features/auth/presentation/screens/signup_screen.dart'
-    as _i12;
+    as _i2;
 import 'package:tmda/features/auth/presentation/screens/startup_redirect_screen.dart'
     as _i13;
 import 'package:tmda/features/auth/presentation/screens/welcome_screen.dart'
     as _i18;
-import 'package:tmda/features/main/main_screen.dart' as _i4;
+import 'package:tmda/features/main/main_screen.dart' as _i5;
 import 'package:tmda/features/movies/presentation/screens/movies_details_screen.dart'
-    as _i5;
-import 'package:tmda/features/movies/presentation/screens/movies_screen.dart'
     as _i6;
+import 'package:tmda/features/movies/presentation/screens/movies_screen.dart'
+    as _i7;
 import 'package:tmda/features/movies/presentation/screens/see_all_movies_screen.dart'
-    as _i10;
+    as _i11;
 import 'package:tmda/features/profile/presentation/screens/profile_screen.dart'
-    as _i8;
-import 'package:tmda/features/search/presentation/screens/search_screen.dart'
     as _i9;
+import 'package:tmda/features/search/presentation/screens/search_screen.dart'
+    as _i10;
 import 'package:tmda/features/shared/presentation/screens/trailer_screen.dart'
     as _i14;
 import 'package:tmda/features/tv/presentation/screens/see_all_tv_screen.dart'
-    as _i11;
+    as _i12;
 import 'package:tmda/features/tv/presentation/screens/tv_details_screen.dart'
     as _i15;
 import 'package:tmda/features/tv/presentation/screens/tv_screen.dart' as _i16;
 import 'package:tmda/features/watchlist/presentation/screens/movies_watchlist_screen.dart'
-    as _i7;
+    as _i8;
 import 'package:tmda/features/watchlist/presentation/screens/tv_watchlist_screen.dart'
     as _i17;
 
@@ -94,7 +95,85 @@ class ActorDetailsRouteArgs {
 }
 
 /// generated route for
-/// [_i2.AuthenticatedRoute]
+/// [_i2.AuthWebViewScreen]
+class AuthWebViewRoute extends _i19.PageRouteInfo<AuthWebViewRouteArgs> {
+  AuthWebViewRoute({
+    _i20.Key? key,
+    required String initialUrl,
+    required _i20.PageRouteInfo<Object?> onSuccessRoute,
+    required List<String> successUrlKeywords,
+    List<_i19.PageRouteInfo>? children,
+  }) : super(
+         AuthWebViewRoute.name,
+         args: AuthWebViewRouteArgs(
+           key: key,
+           initialUrl: initialUrl,
+           onSuccessRoute: onSuccessRoute,
+           successUrlKeywords: successUrlKeywords,
+         ),
+         initialChildren: children,
+       );
+
+  static const String name = 'AuthWebViewRoute';
+
+  static _i19.PageInfo page = _i19.PageInfo(
+    name,
+    builder: (data) {
+      final args = data.argsAs<AuthWebViewRouteArgs>();
+      return _i2.AuthWebViewScreen(
+        key: args.key,
+        initialUrl: args.initialUrl,
+        onSuccessRoute: args.onSuccessRoute,
+        successUrlKeywords: args.successUrlKeywords,
+      );
+    },
+  );
+}
+
+class AuthWebViewRouteArgs {
+  const AuthWebViewRouteArgs({
+    this.key,
+    required this.initialUrl,
+    required this.onSuccessRoute,
+    required this.successUrlKeywords,
+  });
+
+  final _i20.Key? key;
+
+  final String initialUrl;
+
+  final _i20.PageRouteInfo<Object?> onSuccessRoute;
+
+  final List<String> successUrlKeywords;
+
+  @override
+  String toString() {
+    return 'AuthWebViewRouteArgs{key: $key, initialUrl: $initialUrl, onSuccessRoute: $onSuccessRoute, successUrlKeywords: $successUrlKeywords}';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    if (other is! AuthWebViewRouteArgs) return false;
+    return key == other.key &&
+        initialUrl == other.initialUrl &&
+        onSuccessRoute == other.onSuccessRoute &&
+        const _i21.ListEquality<String>().equals(
+          successUrlKeywords,
+          other.successUrlKeywords,
+        );
+  }
+
+  @override
+  int get hashCode =>
+      key.hashCode ^
+      initialUrl.hashCode ^
+      onSuccessRoute.hashCode ^
+      const _i21.ListEquality<String>().hash(successUrlKeywords);
+}
+
+/// generated route for
+/// [_i3.AuthenticatedRoute]
 class AuthenticatedRoutes extends _i19.PageRouteInfo<void> {
   const AuthenticatedRoutes({List<_i19.PageRouteInfo>? children})
     : super(AuthenticatedRoutes.name, initialChildren: children);
@@ -104,13 +183,13 @@ class AuthenticatedRoutes extends _i19.PageRouteInfo<void> {
   static _i19.PageInfo page = _i19.PageInfo(
     name,
     builder: (data) {
-      return _i19.WrappedRoute(child: const _i2.AuthenticatedRoute());
+      return _i19.WrappedRoute(child: const _i3.AuthenticatedRoute());
     },
   );
 }
 
 /// generated route for
-/// [_i3.LoginScreen]
+/// [_i4.LoginScreen]
 class LoginRoute extends _i19.PageRouteInfo<void> {
   const LoginRoute({List<_i19.PageRouteInfo>? children})
     : super(LoginRoute.name, initialChildren: children);
@@ -120,13 +199,13 @@ class LoginRoute extends _i19.PageRouteInfo<void> {
   static _i19.PageInfo page = _i19.PageInfo(
     name,
     builder: (data) {
-      return const _i3.LoginScreen();
+      return const _i4.LoginScreen();
     },
   );
 }
 
 /// generated route for
-/// [_i4.MainScreen]
+/// [_i5.MainScreen]
 class MainRoute extends _i19.PageRouteInfo<void> {
   const MainRoute({List<_i19.PageRouteInfo>? children})
     : super(MainRoute.name, initialChildren: children);
@@ -136,13 +215,13 @@ class MainRoute extends _i19.PageRouteInfo<void> {
   static _i19.PageInfo page = _i19.PageInfo(
     name,
     builder: (data) {
-      return const _i4.MainScreen();
+      return const _i5.MainScreen();
     },
   );
 }
 
 /// generated route for
-/// [_i5.MoviesDetailsScreen]
+/// [_i6.MoviesDetailsScreen]
 class MoviesDetailsRoute extends _i19.PageRouteInfo<MoviesDetailsRouteArgs> {
   MoviesDetailsRoute({
     _i20.Key? key,
@@ -160,7 +239,7 @@ class MoviesDetailsRoute extends _i19.PageRouteInfo<MoviesDetailsRouteArgs> {
     name,
     builder: (data) {
       final args = data.argsAs<MoviesDetailsRouteArgs>();
-      return _i5.MoviesDetailsScreen(key: args.key, movieId: args.movieId);
+      return _i6.MoviesDetailsScreen(key: args.key, movieId: args.movieId);
     },
   );
 }
@@ -189,7 +268,7 @@ class MoviesDetailsRouteArgs {
 }
 
 /// generated route for
-/// [_i6.MoviesScreen]
+/// [_i7.MoviesScreen]
 class MoviesRoute extends _i19.PageRouteInfo<void> {
   const MoviesRoute({List<_i19.PageRouteInfo>? children})
     : super(MoviesRoute.name, initialChildren: children);
@@ -199,13 +278,13 @@ class MoviesRoute extends _i19.PageRouteInfo<void> {
   static _i19.PageInfo page = _i19.PageInfo(
     name,
     builder: (data) {
-      return const _i6.MoviesScreen();
+      return const _i7.MoviesScreen();
     },
   );
 }
 
 /// generated route for
-/// [_i7.MoviesWatchlistScreen]
+/// [_i8.MoviesWatchlistScreen]
 class MoviesWatchlistRoute extends _i19.PageRouteInfo<void> {
   const MoviesWatchlistRoute({List<_i19.PageRouteInfo>? children})
     : super(MoviesWatchlistRoute.name, initialChildren: children);
@@ -215,13 +294,13 @@ class MoviesWatchlistRoute extends _i19.PageRouteInfo<void> {
   static _i19.PageInfo page = _i19.PageInfo(
     name,
     builder: (data) {
-      return const _i7.MoviesWatchlistScreen();
+      return const _i8.MoviesWatchlistScreen();
     },
   );
 }
 
 /// generated route for
-/// [_i8.ProfileScreen]
+/// [_i9.ProfileScreen]
 class ProfileRoute extends _i19.PageRouteInfo<void> {
   const ProfileRoute({List<_i19.PageRouteInfo>? children})
     : super(ProfileRoute.name, initialChildren: children);
@@ -231,13 +310,13 @@ class ProfileRoute extends _i19.PageRouteInfo<void> {
   static _i19.PageInfo page = _i19.PageInfo(
     name,
     builder: (data) {
-      return const _i8.ProfileScreen();
+      return const _i9.ProfileScreen();
     },
   );
 }
 
 /// generated route for
-/// [_i9.SearchScreen]
+/// [_i10.SearchScreen]
 class SearchRoute extends _i19.PageRouteInfo<void> {
   const SearchRoute({List<_i19.PageRouteInfo>? children})
     : super(SearchRoute.name, initialChildren: children);
@@ -247,17 +326,17 @@ class SearchRoute extends _i19.PageRouteInfo<void> {
   static _i19.PageInfo page = _i19.PageInfo(
     name,
     builder: (data) {
-      return const _i9.SearchScreen();
+      return const _i10.SearchScreen();
     },
   );
 }
 
 /// generated route for
-/// [_i10.SeeAllMoviesScreen]
+/// [_i11.SeeAllMoviesScreen]
 class SeeAllMoviesRoute extends _i19.PageRouteInfo<SeeAllMoviesRouteArgs> {
   SeeAllMoviesRoute({
     _i20.Key? key,
-    required _i21.MovieCategory category,
+    required _i22.MovieCategory category,
     int? movieId,
     List<_i19.PageRouteInfo>? children,
   }) : super(
@@ -276,7 +355,7 @@ class SeeAllMoviesRoute extends _i19.PageRouteInfo<SeeAllMoviesRouteArgs> {
     name,
     builder: (data) {
       final args = data.argsAs<SeeAllMoviesRouteArgs>();
-      return _i10.SeeAllMoviesScreen(
+      return _i11.SeeAllMoviesScreen(
         key: args.key,
         category: args.category,
         movieId: args.movieId,
@@ -290,7 +369,7 @@ class SeeAllMoviesRouteArgs {
 
   final _i20.Key? key;
 
-  final _i21.MovieCategory category;
+  final _i22.MovieCategory category;
 
   final int? movieId;
 
@@ -313,11 +392,11 @@ class SeeAllMoviesRouteArgs {
 }
 
 /// generated route for
-/// [_i11.SeeAllTvScreen]
+/// [_i12.SeeAllTvScreen]
 class SeeAllTvRoute extends _i19.PageRouteInfo<SeeAllTvRouteArgs> {
   SeeAllTvRoute({
     _i20.Key? key,
-    required _i21.TvCategory category,
+    required _i22.TvCategory category,
     int? tvId,
     List<_i19.PageRouteInfo>? children,
   }) : super(
@@ -332,7 +411,7 @@ class SeeAllTvRoute extends _i19.PageRouteInfo<SeeAllTvRouteArgs> {
     name,
     builder: (data) {
       final args = data.argsAs<SeeAllTvRouteArgs>();
-      return _i11.SeeAllTvScreen(
+      return _i12.SeeAllTvScreen(
         key: args.key,
         category: args.category,
         tvId: args.tvId,
@@ -346,7 +425,7 @@ class SeeAllTvRouteArgs {
 
   final _i20.Key? key;
 
-  final _i21.TvCategory category;
+  final _i22.TvCategory category;
 
   final int? tvId;
 
@@ -364,22 +443,6 @@ class SeeAllTvRouteArgs {
 
   @override
   int get hashCode => key.hashCode ^ category.hashCode ^ tvId.hashCode;
-}
-
-/// generated route for
-/// [_i12.SignupScreen]
-class SignupRoute extends _i19.PageRouteInfo<void> {
-  const SignupRoute({List<_i19.PageRouteInfo>? children})
-    : super(SignupRoute.name, initialChildren: children);
-
-  static const String name = 'SignupRoute';
-
-  static _i19.PageInfo page = _i19.PageInfo(
-    name,
-    builder: (data) {
-      return const _i12.SignupScreen();
-    },
-  );
 }
 
 /// generated route for
@@ -534,7 +597,7 @@ class TvWatchlistRoute extends _i19.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i2.UnauthenticatedRoute]
+/// [_i3.UnauthenticatedRoute]
 class UnauthenticatedRoutes extends _i19.PageRouteInfo<void> {
   const UnauthenticatedRoutes({List<_i19.PageRouteInfo>? children})
     : super(UnauthenticatedRoutes.name, initialChildren: children);
@@ -544,7 +607,7 @@ class UnauthenticatedRoutes extends _i19.PageRouteInfo<void> {
   static _i19.PageInfo page = _i19.PageInfo(
     name,
     builder: (data) {
-      return _i19.WrappedRoute(child: const _i2.UnauthenticatedRoute());
+      return _i19.WrappedRoute(child: const _i3.UnauthenticatedRoute());
     },
   );
 }

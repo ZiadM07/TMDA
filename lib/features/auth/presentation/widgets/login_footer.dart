@@ -25,7 +25,20 @@ class LoginFooter extends StatelessWidget {
               weight: FontWeight.w500,
               color: context.colorScheme.primary,
             ).addAction(
-              onTap: isLoading ? null : () => context.pushRoute(SignupRoute()),
+              onTap: isLoading
+                  ? null
+                  : () => context.pushRoute(
+                      AuthWebViewRoute(
+                        initialUrl: 'https://www.themoviedb.org/signup',
+                        successUrlKeywords: const [
+                          '/login',
+                          '/account',
+                          '/settings',
+                          '/u/',
+                        ],
+                        onSuccessRoute: const LoginRoute(),
+                      ),
+                    ),
             ),
           ],
         ),

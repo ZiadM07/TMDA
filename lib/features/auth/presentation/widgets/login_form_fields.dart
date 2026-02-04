@@ -1,5 +1,7 @@
+import '../../../../config/router/app_router.gr.dart';
 import '../../../../core/constants/exports.dart';
 import '../../../../core/framework/app_validator.dart';
+import '../../../shared/presentation/widgets/app_text.dart';
 import '../../../shared/presentation/widgets/app_text_form_field.dart';
 
 class LoginFormFields extends StatelessWidget {
@@ -53,6 +55,28 @@ class LoginFormFields extends StatelessWidget {
             passwordFocusNode.unfocus();
             if (!isLoading) onLogin();
           },
+        ),
+        const SizedBox(height: 10),
+        Align(
+          alignment: Alignment.centerRight,
+
+          child:
+              AppText(
+                context.locale.forgetPassword,
+                style: context.textTheme.titleSmall?.copyWith(
+                  color: context.colorScheme.primary,
+                ),
+              ).addAction(
+                onTap: () {
+                  context.pushRoute(
+                    AuthWebViewRoute(
+                      initialUrl: 'https://www.themoviedb.org/reset-password',
+                      successUrlKeywords: const ['/login'],
+                      onSuccessRoute: const LoginRoute(),
+                    ),
+                  );
+                },
+              ),
         ),
       ],
     );

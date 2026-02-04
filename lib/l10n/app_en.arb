@@ -38,7 +38,7 @@
 
   "userName": "Username",
   "password": "Password",
-  "forgetPassword": "Forgot password?",
+  "forgetPassword": "Forgot password",
   "dontHaveAnAccount": "Don’t have an account?",
 
   "newMovies": "New Movies",
@@ -133,5 +133,7 @@
   "enterYourPassword": "Enter your password",
   "noResultsFound": "No results found",
   "signInToContinue": "Sign in to continue",
+  "somethingWentWrongTryAgain":" Something went wrong. Please try again.",
+  "youEnteredInvalidUsernameOrPassword": " You entered invalid username or password",
   "noResultsFoundDescription": "No results found. Please try again with different keywords."
   }

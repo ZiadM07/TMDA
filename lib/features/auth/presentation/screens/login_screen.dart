@@ -52,7 +52,7 @@ class _LoginScreenState extends State<LoginScreen> {
           } else if (state.status == StateStatus.error) {
             kPrint('Login error: ${state.message}');
             AppToast.showError(
-              message: state.message ?? context.locale.somethingWentWrong,
+              message: context.locale.youEnteredInvalidUsernameOrPassword,
               context: context,
             );
           }
@@ -77,7 +77,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     isLoading: isLoading,
                     onLogin: _login,
                   ),
-                  const SizedBox(height: 48),
+                  const SizedBox(height: 32),
                   LoginButton(isLoading: isLoading, onPressed: _login),
                   const SizedBox(height: 80),
                   LoginFooter(isLoading: isLoading),
