@@ -43,7 +43,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return AppScaffold(
       appbarSize: 0,
       showBackButton: false,
-      resizeToAvoidBottomInset: true,
+      resizeToAvoidBottomInset: false,
       body: BlocConsumer<AuthCubit, AppState>(
         listener: (context, state) {
           if (state.status == StateStatus.success) {
@@ -62,29 +62,25 @@ class _LoginScreenState extends State<LoginScreen> {
 
           return Form(
             key: _formKey,
-            child: SingleChildScrollView(
-              physics: const BouncingScrollPhysics(),
-              child: Column(
-                children: [
-                  const SizedBox(height: 100),
-                  const LoginHeader(),
-                  const SizedBox(height: 50),
-                  LoginFormFields(
-                    usernameController: _usernameController,
-                    passwordController: _passwordController,
-                    usernameFocusNode: _usernameFocusNode,
-                    passwordFocusNode: _passwordFocusNode,
-                    isLoading: isLoading,
-                    onLogin: _login,
-                  ),
-                  const SizedBox(height: 32),
-                  LoginButton(isLoading: isLoading, onPressed: _login),
-                  const SizedBox(height: 80),
-                  LoginFooter(isLoading: isLoading),
-                  const SizedBox(height: 32),
-                ],
-              ).addPadding(horizontal: 20),
-            ),
+            child: ListView(
+              children: [
+                const SizedBox(height: 70),
+                const LoginHeader(),
+                const SizedBox(height: 50),
+                LoginFormFields(
+                  usernameController: _usernameController,
+                  passwordController: _passwordController,
+                  usernameFocusNode: _usernameFocusNode,
+                  passwordFocusNode: _passwordFocusNode,
+                  isLoading: isLoading,
+                  onLogin: _login,
+                ),
+                const SizedBox(height: 32),
+                LoginButton(isLoading: isLoading, onPressed: _login),
+                const SizedBox(height: 80),
+                LoginFooter(isLoading: isLoading),
+              ],
+            ).addPadding(horizontal: 20),
           );
         },
       ),
